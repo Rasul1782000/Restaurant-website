@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Fresh Produce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="payment">
+        <h2>Choose Your Payment Method</h2>
+
+        <div id="payment-method">
+            <!-- Payment method will be selected -->
+        </div>
+
+        <div class="otp-section" style="display:none;">
+            <label for="otp">Enter OTP:</label>
+            <input type="text" id="otp" name="otp" required>
+            <button id="verify-otp" class="btn-primary">Verify OTP</button>
+        </div>
+
+        <p id="payment-status"></p>
+    </section>
+
+    <script>
+        document.getElementById('pay-gpay').addEventListener('click', function () {
+            document.getElementById('payment-method').innerHTML = 'You have selected Google Pay. Please enter the OTP sent to your phone.';
+            document.querySelector('.otp-section').style.display = 'block';
+        });
+
+        document.getElementById('pay-paypal').addEventListener('click', function () {
+            document.getElementById('payment-method').innerHTML = 'You have selected PayPal. Please enter the OTP sent to your email.';
+            document.querySelector('.otp-section').style.display = 'block';
+        });
+
+        document.getElementById('verify-otp').addEventListener('click', function () {
+            const otp = document.getElementById('otp').value;
+
+            if (otp === '123456') { // Simulating OTP verification
+                document.getElementById('payment-status').innerText = 'Payment Successful!';
+                setTimeout(function () {
+                    window.location.href = 'success.html'; // Redirect to success page
+                }, 2000);
+            } else {
+                alert('Invalid OTP!');
+            }
+        });
+    </script>
+</body>
+
+</html>

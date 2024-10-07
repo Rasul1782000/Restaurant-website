@@ -1,0 +1,371 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+html,
+body {
+    height: 10%;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #0a0909;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+/* Hero Section */
+.hero {
+    background-image: url('Images/ChefBackground.png');
+    /* Chef Background Image */
+    background-size: cover;
+    background-position: bottom;
+    height: 100vh;
+    /* Full viewport height */
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    flex-direction: column;
+    color: rgb(34, 174, 10);
+    /* Red color for readability */
+    padding: 0 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Dark overlay for readability */
+}
+
+.hero-content {
+    max-width: left;
+}
+
+.hero h1 {
+    font-size: 8px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.hero-content img {
+    width: 200px;
+    /* Set the image width to 20px */
+    height: 200px;
+    /* Maintain the aspect ratio */
+    margin-right: 200px;
+    /* Space between image and the next element */
+    /* You can add more styling if needed */
+}
+
+.hero p {
+    font-size: 50px;
+    color: #fe0d0d;
+}
+
+/* Menu Section */
+.menu {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.menu h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.menu-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.menu-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.menu-item p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.btn-primary {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: overline;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+}
+
+/* Authentication Section */
+.auth {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.auth h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.auth .auth-form {
+    max-width: 400px;
+    margin: auto;
+}
+
+.auth .form-group {
+    margin-bottom: 15px;
+}
+
+.auth input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.auth button {
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth button:hover {
+    background-color: #218838;
+}
+
+.auth p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #555;
+}
+
+.auth a {
+    color: #28a745;
+    text-decoration: none;
+}
+
+.auth a:hover {
+    text-decoration: underline;
+}
+
+/* Billing Section */
+.billing {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.billing h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.billing #order-details {
+    margin-bottom: 40px;
+}
+
+.billing p {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #555;
+}
+
+.payment-options {
+    margin-top: 20px;
+}
+
+.payment-options button {
+    padding: 15px 40px;
+    font-size: 20px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.payment-options button:hover {
+    background-color: #0056b3;
+}
+
+/* Payment Section */
+.payment {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.payment h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.payment #payment-method {
+    margin-bottom: 20px;
+}
+
+.payment .otp-section {
+    margin-top: 20px;
+}
+
+.payment label {
+    font-size: 18px;
+    color: #555;
+}
+
+.payment input {
+    padding: 10px;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.payment button {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.payment button:hover {
+    background-color: #218838;
+}
+
+.payment p {
+    font-size: 20px;
+    color: #555;
+    margin-top: 20px;
+}
+
+/* Success Page */
+.success {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.success h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #28a745;
+}
+
+.success p {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.success .btn-primary {
+    padding: 15px 40px;
+    font-size: 20px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.success .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        height: 40vh;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .menu-items {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .auth .auth-form {
+        max-width: 100%;
+    }
+
+    .billing,
+    .payment,
+    .success {
+        padding: 30px 20px;
+    }
+
+    .billing p,
+    .payment p,
+    .success p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .menu-items {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .auth input {
+        font-size: 16px;
+    }
+
+    .payment input {
+        font-size: 16px;
+    }
+
+    .payment-options button {
+        font-size: 16px;
+    }
+}

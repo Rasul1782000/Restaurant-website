@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing - Fresh Produce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="billing">
+        <h2>Billing Details</h2>
+
+        <div id="order-details">
+            <!-- Order details will be dynamically inserted using JavaScript -->
+        </div>
+
+        <div class="payment-options">
+            <button class="btn-primary" id="pay-gpay">Pay with Google Pay</button>
+            <button class="btn-primary" id="pay-paypal">Pay with PayPal</button>
+        </div>
+    </section>
+
+    <script>
+        // Function to get query parameters from the URL
+        function getQueryParams() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const dish = urlParams.get('dish');
+            const price = urlParams.get('price');
+            const user = urlParams.get('user');
+            return { dish, price, user };
+        }
+
+        // Function to display order details
+        function displayOrderDetails() {
+            const { dish, price, user } = getQueryParams();
+            const orderDetailsElement = document.getElementById('order-details');
+            orderDetailsElement.innerHTML = `
+                <p><strong>Dish:</strong> ${dish.charAt(0).toUpperCase() + dish.slice(1)}</p>
+                <p><strong>Price:</strong> $${price}</p>
+                <p><strong>Customer:</strong> ${user}</p>
+            `;
+        }
+
+        // Call the function to display the order details on page load
+        window.onload = displayOrderDetails;
+    </script>
+</body>
+
+</html>
